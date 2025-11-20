@@ -1,0 +1,216 @@
+.container-home .section-hero {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background: url(../img/hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.container-home .section-hero h1 {
+    font-size: 80px;
+    color: white;
+}
+
+.container-home .section-hero p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e5e7eb;
+    font-style: italic;
+}
+
+.cta-buttons {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.btn {
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: black;
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-hover);
+    color: black;
+}
+
+.btn-outline {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background: var(--color-primary);
+    color: black;
+}
+
+
+.container-home .section-about {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 10%;
+    height: auto;
+}
+
+.container-home .section-about .about h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.container-home .section-about .about h2 .gear {
+    color: var(--color-primary);
+}
+
+.container-home .section-about .about h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-primary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.container-home .section-about .about p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.section-features {
+    background: var(--color-tertiary);
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    height: 100vh;
+    text-align: center;
+}
+
+.section-features .features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.section-features h2 {
+    color: white;
+}
+
+.section-features .features .feature {
+    flex: 1 1 280px;
+    background: var(--color-secondary);
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    height: 250px;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.section-features .features .feature i {
+    font-size: 36px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.section-features .features .feature h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.section-features .features .feature p {
+    font-size: 16px;
+    color: #e5e7eb;
+}
+
+
+@media (max-width: 768px) {
+    .container-home .section-hero h1 {
+        font-size: 30px;
+    }
+
+    .container-home .section-hero p {
+        font-size: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        height: 40px;
+        font-size: 14px;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .container-home .section-about .about h2{
+        font-size: 25px
+    }
+
+    .section-features {
+        gap: 50px;
+        padding: 50px;
+    }
+
+    .section-features .features {
+        gap: 15px;
+    }
+
+    .section-features .features .feature {
+        height: 150px;
+        width: 150px;
+
+    }
+
+    .section-features .features .feature i {
+        font-size: 24px;
+    }
+
+    .section-features .features .feature h3 {
+        font-size: 16px;
+    }
+
+    .section-features .features .feature p {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,143 @@
+
+.container-contact{
+    background: var(--color-tertiary);
+    display: flex;justify-content: center;
+    align-items: center;
+    height: 96vh;
+}
+
+.container-contact .section-contact{
+    margin-top: 80px;
+    background: var(--color-secondary);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 75%;
+}
+
+.section-contact .get-in-touch{
+    width: 50%;
+    background: var(--color-primary);
+    border-radius: 20px;
+}
+.section-contact form{
+    width: 50%;
+}
+
+.section-contact .get-in-touch{
+    padding: 100px 50px;
+}
+
+.section-contact .get-in-touch h2{
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.section-contact .get-in-touch p{
+    margin-bottom: 40px;
+}
+.section-contact .get-in-touch .social-media p{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.section-contact form{
+    padding: 90px 50px;
+}
+
+.section-contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-contact form input{
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.section-contact form textarea{
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.section-contact form input,
+.section-contact form textarea {
+    border: 2px solid transparent;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.section-contact form input:focus, form textarea:focus{
+    border-color: var(--color-primary);
+    color: black;
+}
+
+.section-contact form button{
+    width: 100px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: var(--color-primary);
+    border: none;
+    transition: 0.1s;
+}
+
+.section-contact form button:hover{
+    background: var(--color-primary-hover);
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .container-contact .section-contact{
+        flex-direction: column;
+        height: auto;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+
+    .section-contact .get-in-touch{
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .section-contact .get-in-touch h2{
+        font-size: 14px;
+    }
+
+    .section-contact .get-in-touch p{
+        margin-bottom: 10px;
+        color: #121212;
+        font-size: 10px;
+    }
+
+    .section-contact .get-in-touch .social-media p{
+        margin-bottom: 5px;
+    }
+
+    .section-contact form{
+        width: 100%;
+        padding: 20px;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .section-contact form input{
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .section-contact form textarea{
+        height: 70px;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+}

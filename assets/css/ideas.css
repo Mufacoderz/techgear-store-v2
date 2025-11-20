@@ -1,0 +1,127 @@
+.container-ideas{
+    background: var(--color-tertiary);
+}
+
+.container-ideas .section-ideas{
+    width: 100%;
+    padding: 100px 10%;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.container-ideas .section-ideas h2{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.container-ideas .section-ideas h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-primary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.container-ideas .section-ideas .ideas-list{
+    display: flex;
+    gap: 110px;
+    flex-direction: column;
+}
+
+.section-ideas .ideas-list .ideas-card{
+    background: var(--color-secondary);
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.ideas-card .image-idea{
+    width: 50%;
+    overflow: hidden;
+}
+.ideas-card .image-idea img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.ideas-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(34, 211, 238, 0.15);
+}
+
+.ideas-card:hover img{
+    transform: scale(1.05);
+}
+
+.ideas-card .desc-idea {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px 60px 30px 30px;
+}
+
+.ideas-card .desc-idea h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.ideas-card .desc-idea p {
+    font-size: 18px;
+    color: #d1d5db;
+    line-height: 1.5;
+}
+
+.ideas-card .desc-idea a{
+    color: var(--color-primary);
+    text-decoration: none;
+    width: 200px;
+}
+.ideas-card .desc-idea a:hover{
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .container-ideas .section-ideas{
+        padding-top: 70px;
+    }
+    .container-ideas .section-ideas h2{
+        font-size: 25px;
+    }
+
+    .section-ideas .ideas-list .ideas-card{
+        flex-direction: column;
+    }
+
+    .ideas-card .image-idea{
+        width: 100%;
+        height: 50%;
+    }
+
+    .ideas-card .desc-idea{
+        width: 100%;
+        padding: 20px;
+        gap: 5px;
+    }
+
+    .ideas-card .desc-idea h3{
+        font-size: 20px;
+    }
+    .ideas-card .desc-idea p{
+        font-size: 12px;
+    }
+    .ideas-card .desc-idea a{
+        font-size: 12px;
+    }
+}
