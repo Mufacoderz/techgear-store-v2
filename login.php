@@ -1,7 +1,8 @@
 <?php
     session_start();
-    include '../../config/koneksi.php';
+    include 'config/koneksi.php';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
@@ -77,7 +78,6 @@
         $input = $_POST['username'];
         $password = $_POST['password'];
 
-        //cek input ke database apakah udh sesuai atau blum dgn data yg ada
         if(filter_var($input, FILTER_VALIDATE_EMAIL)){
             $query = "SELECT * from users WHERE email = '$input'";
         } else{
@@ -89,12 +89,13 @@
         if(mysqli_num_rows($result)>0){
             $row = mysqli_fetch_assoc($result);
 
+            
             if(password_verify($password, $row['password'])){
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['nama_lengkap'] = $row['nama_lengkap'];
                 $_SESSION['username'] = $row['username'];
 
-                header("Location: dashboard.php");
+                header("Location: pages/admin/productAdmin.php");
                 exit();
 
             }
@@ -110,10 +111,10 @@
 
     <form method="post" action="">
         <label >Username atau email</label><br>
-        <input type="text" name="username" placeholder="Masukkan username atau email" require><br>
+        <input type="text" name="username" placeholder="Masukkan username atau email" required><br>
 
         <label>Password</label><br>
-        <input type="password" name="password" placeholder="Masukkan password" require><br>
+        <input type="password" name="password" placeholder="Masukkan password" required><br>
 
         <button type="submit" name="login">Login</button>
     </form>

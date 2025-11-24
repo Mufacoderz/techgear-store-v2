@@ -195,6 +195,43 @@
     scroll-margin-top: 210px;
 }
 
+/* product.css */
+#product .hero-section .admin-card {
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    gap: 20px;
+    flex-wrap: wrap;
+}
+#product .hero-section .admin-card .admin-text h2 {
+    font-size: 22px; 
+    color: white; 
+    margin: 0;
+}
+#product .hero-section .admin-card .admin-text p {
+    font-size: 14px; 
+    color: #dfdede; 
+    margin: 4px 0 0;
+}
+#product .hero-section .admin-card .admin-actions .btn-add {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#product .hero-section .admin-card .admin-actions .btn-add:hover {
+    background-color:var(--color-primary-hover);
+}
 
 
 @media (max-width: 768px) {

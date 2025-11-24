@@ -1,5 +1,9 @@
+<?php
+session_start();
+?>
+
 <body>
-    
+
     <header>
         <nav>
             <h1>
@@ -31,6 +35,12 @@
                 <div class="cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
+
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <a href="logout.php" class="btn-login-logout"><i class="fa-solid fa-user"></i></a>
+                <?php else: ?>
+                    <a href="login.php" class="btn-login-logout"><i class="fa-solid fa-user"></i></a>
+                <?php endif; ?>
             </div>
         </nav>
     </header>

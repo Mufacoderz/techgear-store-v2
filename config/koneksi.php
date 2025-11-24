@@ -12,6 +12,6 @@ if(!$conn){
 };
 
 
-echo "Berhasil koneksi anjay"
+// echo "Berhasil koneksi"
 
 ?>
