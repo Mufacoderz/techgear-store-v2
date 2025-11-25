@@ -12,6 +12,7 @@
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="products.php">Produk</a></li>
                 <li><a href="berita.php">Berita</a></li>
+                <li><a href="../../index.php">Kembali Ke Website</a></li>
                 <li><a href="logout.php" class="logout">Logout</a></li>
             </ul>
         </div>
