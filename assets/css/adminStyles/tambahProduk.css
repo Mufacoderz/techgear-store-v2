@@ -1,0 +1,78 @@
+.form-container {
+    width: 450px;
+    margin: 25px auto;
+    padding: 25px;
+    color: #fff;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #3a3a3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.form-container form{
+    margin-bottom: 20px;
+}
+
+.product-form .form-group {
+    margin-bottom: 16px;
+}
+
+.product-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #cfcfcf;
+}
+
+.product-form input,
+.product-form select {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    
+    backdrop-filter: blur(12px);
+    transition: border 0.2s;
+}
+
+.product-form input:focus,
+.product-form select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background: var(--color-primary);
+    color: var(--color-tertiary);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn-submit:hover {
+    background: var(--color-primary-hover);
+}
+

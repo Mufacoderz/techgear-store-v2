@@ -42,7 +42,10 @@ include '../../config/koneksi.php';
     }
     ?>
 
-    <form method="post" action="">
+    <div class="container">
+        <div class="login">
+        <h1>Masuk Sebagai Admin</h1>
+        <form method="post" action="">
         <label>Username atau email</label><br>
         <input type="text" name="username" placeholder="Masukkan username atau email" require><br>
 
@@ -55,6 +58,8 @@ include '../../config/koneksi.php';
         
         <button type="submit" name="login" class="btn">Login</button>
     </form>
+    </div>
+    </div>
 
 </body>
 

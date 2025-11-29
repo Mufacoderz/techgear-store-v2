@@ -4,7 +4,7 @@
     <main class="container-home">
 
         <section class="section-hero">
-            <h1><span class="gear">Mufatech</span> Gear</h1>
+            <h1><span class="gear">Mufatech</span> Store</h1>
             <p>Gear up your dream desk.</p>
             <div class="cta-buttons">
                 <a href="pages/product.php" class="btn btn-primary">Gear Up Now</a>

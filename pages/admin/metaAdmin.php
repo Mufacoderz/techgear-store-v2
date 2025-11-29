@@ -8,7 +8,8 @@
     <link rel="icon" href="../../assets/img/icon.png">
     <link rel="stylesheet" href="../../assets/css/adminStyles/product.css">
     <link rel="stylesheet" href="../../assets/css/adminStyles/login.css">
-    <link rel="stylesheet" href="../../assets/css/adminStyles/sidebar.css">
+    <link rel="stylesheet" href="../../assets/css/adminStyles/global.css">
+    <link rel="stylesheet" href="../../assets/css/adminStyles/tambahProduk.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap"
         rel="stylesheet">

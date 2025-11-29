@@ -70,7 +70,7 @@ function renderProducts(data, containerId) {
         <div class="product-card">
             <img src="${item.image}" alt="${item.product_name}" width="150">
             <h3>${item.product_name}</h3>
-            <p>Rp ${item.price.toLocaleString('id-ID')}</p>
+            <p>Rp ${Number(item.price).toLocaleString('id-ID')}</p>
             <div>
                 <button class="cart-btn">
                     Add to cart <i class="fa-solid fa-cart-shopping"></i>

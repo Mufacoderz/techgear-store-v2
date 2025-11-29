@@ -1,10 +1,4 @@
-:root {
-    --color-primary: #22d3ee;
-    --color-primary-hover: #a1e9f4;
-    --color-secondary: #2c2c2c;
-    --color-tertiary: #1A1A1A;
-    --color-text: #fff;
-}
+
 
 *{
     scroll-behavior: smooth;
@@ -32,6 +26,9 @@ h1,h2,h3 {
     align-items: center;
     cursor: pointer;
     transition: 0.3s;
+    text-decoration: none;
+    
+
 }
 
 .add-product-btn:hover{
@@ -40,6 +37,7 @@ h1,h2,h3 {
 
 .add-product-btn p{
     transition: 0.3s;
+    text-decoration: none;
 }
 .add-product-btn:hover p{
     transform: scale(2);
