@@ -3,7 +3,7 @@ session_start();
 include '../../config/koneksi.php';
 ?>
 
-<?php include'metaAdmin.php';?>
+<?php include'../admin/metaAdmin.php';?>
 
 <body>
 
@@ -31,7 +31,7 @@ include '../../config/koneksi.php';
                 $_SESSION['nama_lengkap'] = $row['nama_lengkap'];
                 $_SESSION['username'] = $row['username'];
 
-                header("Location: dashboard.php");
+                header("Location: ../admin/dashboard.php");
                 exit();
             } else {
                 $error = "Password Salah";

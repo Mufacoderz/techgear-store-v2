@@ -13,7 +13,7 @@
                 <li><a href="manajemenProduct.php">Manajemen Produk</a></li>
                 <li><a href="manajemenPesanan.php">Manajemen Pesanan</a></li>
                 <li><a href="../../index.php">Kembali Ke Website</a></li>
-                <li><a href="logout.php" class="logout">Logout</a></li>
+                <li><a href="../auth/logout.php" class="logout">Logout</a></li>
             </ul>
         </div>
     </div>
