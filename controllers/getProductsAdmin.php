@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $lists[$cat][] = $row;
 }
 
-// Map kategori → nama folder
+// atur kategori ke nma folder
 $folderMap = [
     "Keyboard" => "keyboards",
     "Mouse" => "mouses",
@@ -71,7 +71,7 @@ function renderItems($items, $id, $title, $folderMap)
         </div>
 
         <div class='button'>
-            <a class='edit'>
+            <a class='edit' href='editProduct.php?id={$p['id']}'>
                 <i class='fa-solid fa-pen'></i>
             </a>
 

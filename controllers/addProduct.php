@@ -25,7 +25,7 @@ if (isset($_POST['simpan'])) {
     $catData = mysqli_fetch_assoc($catQuery);
     $categoryName = $catData['name'];
 
-    // Pemetaan kategori -> folder
+    // atur kategori ke nma folder
     $folderMap = [
         "Keyboard"  => "keyboards",
         "Mouse"     => "mouses",

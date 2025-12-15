@@ -80,28 +80,6 @@ while ($row = mysqli_fetch_assoc($catResult)) {
         </div>
     </section>
 
-    <section class="dashboard-row">
-
-        <div class="dashboard-box">
-            <h4>Aktivitas Terakhir</h4>
-            <ul class="activity-list">
-                <li>Produk <strong>Keyboard Keychron K6</strong> ditambahkan</li>
-                <li>Pesanan <strong>#P-01</strong> dikirim</li>
-                <li>Pelanggan baru mendaftar</li>
-                <li>Stok produk diperbarui</li>
-            </ul>
-        </div>
-
-        <div class="dashboard-box">
-            <h4>Ringkasan Sistem</h4>
-            <div class="system-info">
-                <p>Status Sistem <span class="status-online">Online</span></p>
-                <p>Pesanan Hari Ini <strong>14</strong></p>
-                <p>Pesanan Dibatalkan <strong>0</strong></p>
-            </div>
-        </div>
-
-    </section>
 
 </div>
 
