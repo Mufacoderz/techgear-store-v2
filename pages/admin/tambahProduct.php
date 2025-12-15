@@ -11,12 +11,14 @@ $kategori = mysqli_query($conn, "SELECT * FROM categories");
 ?>
 
 <?php include 'metaAdmin.php'; ?>
+<body>
 <?php include 'sidebar.php'; ?>
 
 <div class="main-content">
 
-    <section class="cards">
-        <div class="card form-container">
+    <div class="content-wrapper">
+        <section class="cards-form">
+        <div class=" form-container">
 
             <h2>Tambah Produk</h2>
 
@@ -51,10 +53,9 @@ $kategori = mysqli_query($conn, "SELECT * FROM categories");
             </form>
         </div>
     </section>
-
-</div>
-
+    </div>
 
 
-</body>
-</html>
+
+
+<?php include 'footerAdmin.php'; ?>

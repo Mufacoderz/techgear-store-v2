@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../assets/css/adminStyles/login.css">
     <link rel="stylesheet" href="../../assets/css/adminStyles/global.css">
     <link rel="stylesheet" href="../../assets/css/adminStyles/dashboard.css">
-    <link rel="stylesheet" href="../../assets/css/adminStyles/tambahProduk.css">
+    <link rel="stylesheet" href="../../assets/css/adminStyles/tambahEditProduk.css">
     <link rel="stylesheet" href="../../assets/css/adminStyles/pesanan.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

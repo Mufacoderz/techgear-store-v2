@@ -1,12 +1,6 @@
 
 
-*{
-    scroll-behavior: smooth;
-}
 
-h1,h2,h3 {
-    font-family: 'Orbitron', sans-serif;
-}
 
 .main-content .add-product{
     display: flex;
@@ -189,30 +183,58 @@ h1,h2,h3 {
 
 
 
-
-
 @media (max-width: 600px) {
 
-    .categories {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 8px;
-        scrollbar-width: none; 
+    .main-content .add-product {
+        align-items: flex-start;
     }
 
-    .categories::-webkit-scrollbar {
+    .admin-product-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .admin-product-card img {
+        width: 100%;
+        height: 160px;
+        border-radius: 10px;
+    }
+
+    .admin-product-info h3 {
+        font-size: 15px;
+    }
+
+    .admin-product-info .price {
+        font-size: 13px;
+    }
+
+    .admin-product-card .button {
+        top: 8px;
+        right: 8px;
+    }
+
+    .admin-product-card .button a {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .categories-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+    }
+
+    .categories-list::-webkit-scrollbar {
         display: none;
     }
 
-    .categories a {
+    .categories .categories-list a {
         flex: 0 0 auto;
         padding: 9px 14px;
         font-size: 13px;
         border-radius: 8px;
-    }
-
-    .categories a:hover {
-        transform: scale(1.05);
     }
 }

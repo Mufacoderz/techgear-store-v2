@@ -29,7 +29,8 @@ if (!isset($_SESSION['user_id'])) {
 
 
     <div class="main-content" id="top">
-        <div class="add-product">
+        <div class="conten-wrapper">
+            <div class="add-product">
             <h3>Tambah produk</h3>
             <a class="add-product-btn" href="/projek-uas/pages/admin/tambahProduct.php">
                 <p>+</p>
@@ -51,13 +52,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
 
             <?php include __DIR__ . '/../../controllers/getProductsAdmin.php'; ?>
-    </div>
 
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="/projek-uas/assets/js/scriptAdmin.js"></script>
-
-</body>
-
-</html>
+        </div>
+        <?php include 'footerAdmin.php'; ?>

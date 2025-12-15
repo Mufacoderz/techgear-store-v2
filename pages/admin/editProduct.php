@@ -16,16 +16,22 @@ $produk = mysqli_fetch_assoc($query);
 ?>
 
 <?php include 'metaAdmin.php'; ?>
+
+<body>
+
 <?php include 'sidebar.php'; ?>
 
 <div class="main-content">
 
-    <section class="cards">
-        <div class="card form-container">
+    <div class="content-wrapper">
+        <section class="cards-form">
+        <div class=" form-container">
 
             <h2>Edit Produk</h2>
 
             <form action="../../controllers/updateProduct.php" method="POST"  class="product-form">
+
+                <input type="hidden" name="id" value="<?= $produk['id']; ?>">
 
                 <div class="form-group">
                     <label>Nama Produk</label>
@@ -56,11 +62,8 @@ $produk = mysqli_fetch_assoc($query);
             </form>
         </div>
     </section>
-
-</div>
-
+    </div>
 
 
-</body>
 
-</html>
+<?php include 'footerAdmin.php'; ?>

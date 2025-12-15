@@ -1,5 +1,5 @@
     <footer>
-        <p>&copy; <span id="year"></span> TechGear</p>
+        <p>&copy; <span id="year"></span> TechGear Store</p>
 
     </footer>
 

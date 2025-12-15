@@ -19,9 +19,8 @@ include 'sidebar.php';
 ?>
 
     <div class="main-content">
-        <header>
-            <p>Anda sedang berada di halaman pesanan.</p>
-        </header>
+        <div class="content-wrapper">
+            
 
         <section class="cards-pesanan">
             <div class="card-pesanan">
@@ -49,11 +48,8 @@ include 'sidebar.php';
                 <p>82</p>
             </div>
         </section>
-    </div>
+        </div>
 
 
-    <script src="/projek-uas/assets/js/scriptAdmin.js"></script>
-
-</body>
-</html>
+<?php include 'footerAdmin.php'; ?>
 

@@ -39,7 +39,8 @@ while ($row = mysqli_fetch_assoc($catResult)) {
 
 <div class="main-content">
 
-    <header class="dashboard-header">
+    <div class="content-wrapper">
+        <header class="dashboard-header">
         <h1>Halaman Dashboard</h1>
         <p>Selamat datang kembali, <strong><?= $_SESSION['nama_lengkap']; ?></strong></p>
     </header>
@@ -79,10 +80,9 @@ while ($row = mysqli_fetch_assoc($catResult)) {
             <?php endforeach; ?>
         </div>
     </section>
+    </div>
 
 
-</div>
 
-<script src="/projek-uas/assets/js/scriptAdmin.js"></script>
-</body>
-</html>
+
+<?php include 'footerAdmin.php'; ?>

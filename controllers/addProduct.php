@@ -5,7 +5,6 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 include '../config/koneksi.php';
-//ambil katrgori
 $kategori = mysqli_query($conn, "SELECT * FROM categories");
 
 ?>
@@ -20,7 +19,6 @@ if (isset($_POST['simpan'])) {
     $price = mysqli_real_escape_string($conn, $_POST['price']);
     $category_id = mysqli_real_escape_string($conn, $_POST['category_id']);
 
-    // Ambil nama kategori berdasarkan ID
     $catQuery = mysqli_query($conn, "SELECT name FROM categories WHERE id='$category_id' LIMIT 1");
     $catData = mysqli_fetch_assoc($catQuery);
     $categoryName = $catData['name'];
@@ -36,7 +34,6 @@ if (isset($_POST['simpan'])) {
         "Other"     => "other"
     ];
 
-    // Validasi kategori
     if (!isset($folderMap[$categoryName])) {
         die("Kategori tidak valid!");
     }
@@ -44,7 +41,7 @@ if (isset($_POST['simpan'])) {
     // Folder tujuan upload
     $targetFolder = "../uploads/" . $folderMap[$categoryName] . "/";
 
-    // Jika folder belum ada -> buat
+    // Jika folder belum ada maka buat
     if (!is_dir($targetFolder)) {
         mkdir($targetFolder, 0777, true);
     }
@@ -53,7 +50,7 @@ if (isset($_POST['simpan'])) {
     $foto = $_FILES['image']['name'];
     $tmp = $_FILES['image']['tmp_name'];
 
-    // Buat nama file baru unik
+    // nama unik
     $fotoBaru = uniqid() . "_" . $foto;
 
     if (!move_uploaded_file($tmp, $targetFolder . $fotoBaru)) {
@@ -63,7 +60,6 @@ if (isset($_POST['simpan'])) {
     // Path yang disimpan ke database
     $publicPath = "/projek-uas/uploads/" . $folderMap[$categoryName] . "/" . $fotoBaru;
 
-    // Simpan ke database
     $query = "
         INSERT INTO products (name, price, image, category_id)
         VALUES ('$name', '$price', '$publicPath', '$category_id')
