@@ -92,15 +92,16 @@ body {
 
 .main-content {
     margin-left: 280px;
-    padding: 25px 25px 0 25px;
     color: white;
     transition: 0.3s ease;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 
 .content-wrapper {
+    padding: 25px 25px 0 25px;
     flex: 1;
 }
 

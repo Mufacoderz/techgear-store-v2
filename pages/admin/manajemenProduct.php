@@ -29,7 +29,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
     <div class="main-content" id="top">
-        <div class="conten-wrapper">
+        <div class="content-wrapper">
             <div class="add-product">
             <h3>Tambah produk</h3>
             <a class="add-product-btn" href="/projek-uas/pages/admin/tambahProduct.php">
