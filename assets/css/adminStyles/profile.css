@@ -1,0 +1,19 @@
+.profile-box{
+            max-width: 400px;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+        }
+        input{
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        button{
+            padding: 8px 16px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }

@@ -10,6 +10,7 @@
             <h2>Admin Panel</h2>
             <ul >
                 <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="profileAdmin.php">Profile Admin</a></li>
                 <li><a href="manajemenProduct.php">Manajemen Produk</a></li>
                 <li><a href="manajemenPesanan.php">Manajemen Pesanan</a></li>
                 <li><a href="../../index.php">Kembali Ke Website</a></li>

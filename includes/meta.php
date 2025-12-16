@@ -10,6 +10,7 @@
     <!--link css - cdn -->
     <link rel="stylesheet" href="/projek-uas/assets/css/global.css">
     <link rel="stylesheet" href="/projek-uas/assets/css/index.css">
+    <link rel="stylesheet" href="/projek-uas/assets/css/profile.css">
     <link rel="stylesheet" href="/projek-uas/assets/css/product.css">
     <link rel="stylesheet" href="/projek-uas/assets/css/ideas.css">
     <link rel="stylesheet" href="/projek-uas/assets/css/contact.css">
