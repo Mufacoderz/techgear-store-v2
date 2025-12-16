@@ -1,5 +1,6 @@
+<?php require_once 'auto_guard.php'; ?>
+
 <?php
-session_start();
 include '../../config/koneksi.php';
 
 $testimoni = mysqli_query(
@@ -7,10 +8,6 @@ $testimoni = mysqli_query(
     "SELECT * FROM testimonials ORDER BY created_at ASC"
 );
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
 ?>
 
 <?php include 'metaAdmin.php'; ?>

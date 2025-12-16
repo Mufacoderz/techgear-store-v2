@@ -1,9 +1,7 @@
+<?php require_once 'auto_guard.php'; ?>
+
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../auth/login.php");
-    exit();
-}
+
 include '../../config/koneksi.php';
 $kategori = mysqli_query($conn, "SELECT * FROM categories");
 

@@ -1,4 +1,6 @@
 
+
+
 <footer>
     <p>&copy; <span id="year"></span> TechGear Store</p>
 </footer>

@@ -1,12 +1,7 @@
+<?php require_once 'auto_guard.php'; ?>
 <?php
-session_start();
+
 include '../../config/koneksi.php';
-
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
-
 $id = $_SESSION['user_id'];
 
 // ambil data admin
