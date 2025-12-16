@@ -54,7 +54,6 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 nav h1 {
     font-size: 24px;
     line-height: 32px;
@@ -103,7 +102,6 @@ nav h1 a{
 }
 
 .cart {
-
     font-size: 20px;
     background: var(--color-primary);
     padding: 10px;
@@ -122,30 +120,148 @@ nav h1 a{
     display: none;
 }
 
+/* ============================FOOTER=========================== */
 
-/* ================FOOTER================ */
-footer{
-    height: 30px;
+.footer {
+    background: var(--color-secondary);
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.footer-container {
     display: flex;
-    justify-content: center;
+    padding: 50px 56px;
+}
+
+.footer-left, .footer-right{
+    width: 50%;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-links{
+    width: 50%;
+}
+
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-brand h2{
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.8;
+    max-width: 360px;
+    color: #e5e7eb;
+    margin-bottom: 5px;
+}
+
+.socials{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.socials a {
+    display: inline-flex;
     align-items: center;
-    color: white;
-    padding-bottom: 30px;
-    background: var(--color-tertiary);
-    cursor: pointer;
-}
-
-footer p .login{
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    color: #e5e7eb;
+    font-size: 13px;
+    transition: 0.25s;
     text-decoration: none;
-    margin-left: 5px;
-    color: #ccc;
 }
 
+.socials a:hover {
+    background: var(--color-primary);
+    color: #000;
+    transform: translateY(-3px);
+}
 
+.back-to-top {
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: 0.25s;
+    width: 40%;
+}
 
+.back-to-top:hover {
+    background: var(--color-primary);
+    color: #000;
+}
 
+.footer-links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
+.footer-links ul li{
+    list-style: none;
+}
 
+.footer-links h4 {
+    font-size: 15px;
+    margin-bottom: 18px;
+    color: white;
+    position: relative;
+}
+
+.footer-links h4::after {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background: var(--color-primary);
+    display: block;
+    margin-top: 6px;
+    border-radius: 4px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: #cbd5e1;
+    opacity: 0.85;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(34, 211, 238, 0.15);
+    text-align: center;
+    font-size: 13px;
+    padding: 14px;
+    color: #cbd5e1;
+}
+
+/* ===================RESPONSIf============================== */
 @media (max-width: 768px) {
 
     nav{
@@ -214,4 +330,27 @@ footer p .login{
         padding: 8px;
     }
 
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 32px;
+        gap: 32px;
+    }
+
+    .footer-left, .footer-right{
+        width: 100%;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .socials{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .back-to-top {
+        width: auto;
+    }
 }
