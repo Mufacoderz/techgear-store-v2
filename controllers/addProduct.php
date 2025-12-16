@@ -4,61 +4,38 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
+
 include '../config/koneksi.php';
+
 $kategori = mysqli_query($conn, "SELECT * FROM categories");
-
-?>
-
-
-<?php
-
 
 if (isset($_POST['simpan'])) {
 
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $price = mysqli_real_escape_string($conn, $_POST['price']);
+    $name        = mysqli_real_escape_string($conn, $_POST['name']);
+    $price       = mysqli_real_escape_string($conn, $_POST['price']);
     $category_id = mysqli_real_escape_string($conn, $_POST['category_id']);
 
-    $catQuery = mysqli_query($conn, "SELECT name FROM categories WHERE id='$category_id' LIMIT 1");
-    $catData = mysqli_fetch_assoc($catQuery);
-    $categoryName = $catData['name'];
 
-    // atur kategori ke nma folder
-    $folderMap = [
-        "Keyboard"  => "keyboards",
-        "Mouse"     => "mouses",
-        "Monitor"   => "monitors",
-        "Headphone" => "headphones",
-        "Desk"      => "desks",
-        "Chair"     => "chairs",
-        "Other"     => "other"
-    ];
 
-    if (!isset($folderMap[$categoryName])) {
-        die("Kategori tidak valid!");
-    }
-
-    // Folder tujuan upload
-    $targetFolder = "../uploads/" . $folderMap[$categoryName] . "/";
-
-    // Jika folder belum ada maka buat
-    if (!is_dir($targetFolder)) {
-        mkdir($targetFolder, 0777, true);
-    }
-
-    // Upload gambar
+    // opload foto
     $foto = $_FILES['image']['name'];
-    $tmp = $_FILES['image']['tmp_name'];
+    $tmp      = $_FILES['image']['tmp_name'];
+    $folder = "../uploads/products/";
 
-    // nama unik
+    // nama file unik
     $fotoBaru = uniqid() . "_" . $foto;
 
-    if (!move_uploaded_file($tmp, $targetFolder . $fotoBaru)) {
-        die("Upload gagal! Periksa permission folder.");
+    if ($_FILES['image']['error'] !== UPLOAD_ERR_OK) {
+    die("Error upload file: " . $_FILES['image']['error']);
+}
+
+    // upload file
+    if (!move_uploaded_file($tmp, $folder . $fotoBaru)) {
+        die("Upload gambar gagal!");
     }
 
-    // Path yang disimpan ke database
-    $publicPath = "/projek-uas/uploads/" . $folderMap[$categoryName] . "/" . $fotoBaru;
+    $publicPath = "/uploads/products/" . $fotoBaru;
+
 
     $query = "
         INSERT INTO products (name, price, image, category_id)
@@ -69,7 +46,7 @@ if (isset($_POST['simpan'])) {
         echo "<script>
                 alert('Produk berhasil ditambahkan!');
                 window.location='../pages/admin/manajemenProduct.php';
-                </script>";
+            </script>";
     } else {
         echo "Database Error: " . mysqli_error($conn);
     }

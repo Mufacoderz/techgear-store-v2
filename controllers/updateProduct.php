@@ -3,9 +3,6 @@ include __DIR__ . "/../config/koneksi.php";
 
 $id_produk = $_POST['id'] ?? null;
 
-if (!$id_produk) {
-    die("ID produk tidak ditemukan");
-}
 
 if (isset($_POST['simpan'])) {
 

@@ -1,6 +1,5 @@
 <?php
 
-
 include __DIR__ . "/../config/koneksi.php";
 
 $query = "
@@ -12,6 +11,7 @@ $query = "
 
 $result = mysqli_query($conn, $query);
 
+// List kategori
 $lists = [
     "Keyboard" => [],
     "Mouse" => [],
@@ -32,58 +32,39 @@ while ($row = mysqli_fetch_assoc($result)) {
     $lists[$cat][] = $row;
 }
 
-// atur kategori ke nma folder
-$folderMap = [
-    "Keyboard" => "keyboards",
-    "Mouse" => "mouses",
-    "Monitor" => "monitors",
-    "Headphone" => "headphones",
-    "Desk" => "desks",
-    "Chair" => "chairs",
-    "Other" => "other"
-];
-
-
-
-function renderItems($items, $id, $title, $folderMap)
+// Render produk admin
+function renderItems($items, $id, $title)
 {
-
     echo "<h2>$title</h2>";
     echo "<div id='$id' class='product-container'>";
 
     foreach ($items as $p) {
 
-        $folder = $folderMap[$title];
-
-        $filename = basename($p['image']);
-
-        $imageFull = "../../uploads/$folder/$filename";
-
-        // echo "<p style='color:red'>DEBUG PATH: $imageFull</p>";
+        // image sudah path final di DB: /uploads/products/xxx.webp
+        $imageFull = "../.." . $p['image'];
 
         echo "
-    <div class='admin-product-card' data-aos='fade-left'>
-        <img src='" . $imageFull . "' alt='" . $p['name'] . "'>
+        <div class='admin-product-card' data-aos='fade-left'>
+            <img src='$imageFull' alt='{$p['name']}'>
 
-        <div class='admin-product-info'>
-            <h3>" . $p['name'] . "</h3>
-            <p class='price'>Rp " . number_format($p['price'], 0, ',', '.') . "</p>
+            <div class='admin-product-info'>
+                <h3>{$p['name']}</h3>
+                <p class='price'>Rp " . number_format($p['price'], 0, ',', '.') . "</p>
+            </div>
+
+            <div class='button'>
+                <a class='edit' href='editProduct.php?id={$p['id']}'>
+                    <i class='fa-solid fa-pen'></i>
+                </a>
+
+                <a class='delete' 
+                    href='../../controllers/deleteProduct.php?id={$p['id']}'
+                    onclick=\"return confirm('Hapus produk ini?')\">
+                    <i class='fa-solid fa-trash'></i>
+                </a>
+            </div>
         </div>
-
-        <div class='button'>
-            <a class='edit' href='editProduct.php?id={$p['id']}'>
-                <i class='fa-solid fa-pen'></i>
-            </a>
-
-            <a class='delete' href='../../controllers/deleteProduct.php?id={$p['id']}'
-                onclick=\"return confirm('Hapus produk ini?')\">
-                <i class='fa-solid fa-trash'></i>
-            </a>
-
-
-        </div>
-    </div>
-";
+        ";
     }
 
     echo "</div>";
@@ -94,13 +75,13 @@ function renderItems($items, $id, $title, $folderMap)
 <section class="list-product-section">
 
     <?php
-    renderItems($lists["Keyboard"], "keyboard-list", "Keyboard", $folderMap);
-    renderItems($lists["Mouse"], "mouse-list", "Mouse", $folderMap);
-    renderItems($lists["Monitor"], "monitor-list", "Monitor", $folderMap);
-    renderItems($lists["Headphone"], "headphone-list", "Headphone", $folderMap);
-    renderItems($lists["Desk"], "desk-list", "Desk", $folderMap);
-    renderItems($lists["Chair"], "chair-list", "Chair", $folderMap);
-    renderItems($lists["Other"], "accessories-list", "Other", $folderMap);
+    renderItems($lists["Keyboard"], "keyboard-list", "Keyboard");
+    renderItems($lists["Mouse"], "mouse-list", "Mouse");
+    renderItems($lists["Monitor"], "monitor-list", "Monitor");
+    renderItems($lists["Headphone"], "headphone-list", "Headphone");
+    renderItems($lists["Desk"], "desk-list", "Desk");
+    renderItems($lists["Chair"], "chair-list", "Chair");
+    renderItems($lists["Other"], "accessories-list", "Other");
     ?>
 
     <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>

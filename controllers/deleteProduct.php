@@ -7,42 +7,37 @@ if (!isset($_SESSION['user_id'])) {
 
 include '../config/koneksi.php';
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+if (!isset($_GET['id'])) {
+    header("Location: ../pages/admin/manajemenProduct.php?status=error");
+    exit();
+}
 
-     // Ambil data produk
-    $get = mysqli_query($conn, "SELECT image FROM products WHERE id='$id' LIMIT 1");
-    $data = mysqli_fetch_assoc($get);
+$id = mysqli_real_escape_string($conn, $_GET['id']);
 
-    if ($data) {
+// Ambl data imgnya
+$get = mysqli_query($conn, "SELECT image FROM products WHERE id='$id' LIMIT 1");
+$data = mysqli_fetch_assoc($get);
 
-        $publicPath = $data['image'];
+if ($data && !empty($data['image'])) {
 
-        // Hapus path projek-uas/ utk dapat path sebenarnya
-        $relativePath = str_replace("/projek-uas", "..", $publicPath);
+    // image di DB
+    $publicPath = $data['image'];
 
-        $serverFile = $relativePath;
+    // ubah ke path server
+    $serverFile = ".." . $publicPath;
 
-        //Hapus filenya
-        if (file_exists($serverFile)) {
-            unlink($serverFile);
-        }
+    // hapus file jika ada
+    if (file_exists($serverFile)) {
+        unlink($serverFile);
     }
+}
 
+// HAPUS DATA DI DATABASE
+$query = "DELETE FROM products WHERE id='$id'";
 
-
-    //hapus di db
-
-    $query = "DELETE FROM products WHERE id = '$id'";
-
-    if (mysqli_query($conn, $query)) {
-        header("Location: ../pages/admin/manajemenProduct.php?");
-        exit();
-    } else {
-        header("Location: ../pages/admin/manajemenProduct.php?status=error");
-        exit();
-    }
-
+if (mysqli_query($conn, $query)) {
+    header("Location: ../pages/admin/manajemenProduct.php?status=success");
+    exit();
 } else {
     header("Location: ../pages/admin/manajemenProduct.php?status=error");
     exit();
