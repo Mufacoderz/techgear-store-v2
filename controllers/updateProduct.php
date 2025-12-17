@@ -11,16 +11,15 @@ if (isset($_POST['simpan'])) {
 
     $folder = "../uploads/products/";
 
-    // DEFAULT: pakai gambar lama
+    // bawaannya pakai gambar lama
     $publicPath = $old_image;
 
-    // UPLOAD FOTO (mirip ADD)
+
     if (!empty($_FILES['image']['name'])) {
 
         $foto = $_FILES['image']['name'];
         $tmp  = $_FILES['image']['tmp_name'];
 
-        // nama file unik
         $fotoBaru = uniqid() . "_" . $foto;
 
         if ($_FILES['image']['error'] !== UPLOAD_ERR_OK) {
@@ -30,7 +29,6 @@ if (isset($_POST['simpan'])) {
         if (!move_uploaded_file($tmp, $folder . $fotoBaru)) {
             die("Upload gambar gagal!");
         }
-
         // hapus gambar lama
         if (!empty($old_image)) {
             $oldFile = ".." . $old_image;

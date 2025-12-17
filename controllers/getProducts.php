@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $lists[$cat][] = $row;
 }
 
-// Render produk (gambar langsung dari DB: /uploads/products/xxx.webp)
+// Render produk
 function renderItems($items, $id, $title)
 {
     echo "<h2>$title</h2>";
@@ -40,7 +40,6 @@ function renderItems($items, $id, $title)
 
     foreach ($items as $p) {
 
-        // path gambar sudah final di DB
         $imageFull = "../.." . $p['image'];
 
         echo "
@@ -48,7 +47,10 @@ function renderItems($items, $id, $title)
                 <img src='$imageFull' alt='{$p['name']}'>
                 <h3>{$p['name']}</h3>
                 <p>Rp " . number_format($p['price'], 0, ',', '.') . "</p>
-                <button class='cart-btn'>Add to Cart</button>
+                
+                <a href='../../controllers/addToCart.php?id={$p['id']}' class='cart-btn'>
+                    Add to Cart
+                </a>
             </div>
         ";
     }
@@ -60,15 +62,15 @@ function renderItems($items, $id, $title)
 
 <section class="list-product-section">
 
-    <?php
-    renderItems($lists["Keyboard"], "keyboard-list", "Keyboard");
-    renderItems($lists["Mouse"], "mouse-list", "Mouse");
-    renderItems($lists["Monitor"], "monitor-list", "Monitor");
-    renderItems($lists["Headphone"], "headphone-list", "Headphone");
-    renderItems($lists["Desk"], "desk-list", "Desk");
-    renderItems($lists["Chair"], "chair-list", "Chair");
-    renderItems($lists["Other"], "accessories-list", "Other");
-    ?>
+<?php
+renderItems($lists["Keyboard"], "keyboard-list", "Keyboard");
+renderItems($lists["Mouse"], "mouse-list", "Mouse");
+renderItems($lists["Monitor"], "monitor-list", "Monitor");
+renderItems($lists["Headphone"], "headphone-list", "Headphone");
+renderItems($lists["Desk"], "desk-list", "Desk");
+renderItems($lists["Chair"], "chair-list", "Chair");
+renderItems($lists["Other"], "accessories-list", "Other");
+?>
 
-    <a href="#top"><i class="fa-solid fa-arrow-up"></i></a>
+<a href="#top"><i class="fa-solid fa-arrow-up scroll-top"></i></a>
 </section>

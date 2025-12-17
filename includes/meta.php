@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/projek-uas/assets/css/product.css">
     <link rel="stylesheet" href="/projek-uas/assets/css/ideas.css">
     <link rel="stylesheet" href="/projek-uas/assets/css/contact.css">
+    <link rel="stylesheet" href="/projek-uas/assets/css/cart.css">
+    <link rel="stylesheet" href="/projek-uas/assets/css/checkout.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 

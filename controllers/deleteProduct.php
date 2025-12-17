@@ -26,13 +26,13 @@ if ($data && !empty($data['image'])) {
     // ubah ke path server
     $serverFile = ".." . $publicPath;
 
-    // hapus file jika ada
+    // hapus file
     if (file_exists($serverFile)) {
         unlink($serverFile);
     }
 }
 
-// HAPUS DATA DI DATABASE
+// hapus di db
 $query = "DELETE FROM products WHERE id='$id'";
 
 if (mysqli_query($conn, $query)) {

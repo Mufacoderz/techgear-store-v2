@@ -161,6 +161,7 @@
     margin-top: auto;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    text-decoration: none;
 }
 
 
@@ -169,7 +170,7 @@
     transform: scale(1.05);
 }
 
-.list-product-section a {
+.list-product-section .scroll-top {
     font-size: 28px;
     color: var(--color-primary);
     transition: 0.3s;
@@ -178,7 +179,7 @@
     border: 1px solid var(--color-primary);
 }
 
-.list-product-section a:hover {
+.list-product-section .scroll-top:hover {
     transform: translateY(-15px);
     color: var(--color-primary-hover);
     border: 1px solid var(--color-primary-hover);

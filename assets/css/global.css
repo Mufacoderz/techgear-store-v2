@@ -108,6 +108,7 @@ nav h1 a{
     border-radius: 50%;
     transition: 0.3s;
     color: white;
+    text-decoration: none;
 }
 
 .cart:hover {

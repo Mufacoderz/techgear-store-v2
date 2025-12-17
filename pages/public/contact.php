@@ -13,7 +13,7 @@
                 <p><i class="fa-solid fa-location-dot"></i> Jln. Gerbang Dayaku, Kutai Kartanegara, Kalimantan Timur, Indonesia</p>
             </div>
         </div>
-        <form action="../../includes/kirimPesan.php" method="POST">
+        <form >
             <input type="text" name="name" placeholder="Nama" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="tel" name="phone" placeholder="Nomor telepon" required>

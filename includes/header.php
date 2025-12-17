@@ -1,6 +1,4 @@
-<?php
-session_start(); 
-?>
+
 <body>
 <header>
     <nav>
@@ -22,9 +20,9 @@ session_start();
                 <i class="fa-solid fa-bars open"></i>
                 <i class="fa-solid fa-xmark close"></i>
             </div>
-            <div class="cart">
+            <a href="keranjang.php" class="cart">
                 <i class="fa-solid fa-cart-shopping"></i>
-            </div>
+            </a>
         </div>
     </nav>
 </header>

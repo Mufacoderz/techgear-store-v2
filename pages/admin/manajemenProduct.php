@@ -11,7 +11,6 @@ include '../../config/koneksi.php';
 <body>
     <?php include 'sidebar.php'; ?>
 
-    <!-- buat popup berhasul dan gagal hpus produk -->
 
     <?php if (isset($_GET['status'])): ?>
 

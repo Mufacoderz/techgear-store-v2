@@ -12,8 +12,8 @@
                 <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="profileAdmin.php">Profile Admin</a></li>
                 <li><a href="manajemenProduct.php">Manajemen Produk</a></li>
+                <li><a href="manajemenPesanan.php">Manajemen Pesanan</a></li>
                 <li><a href="testimoni.php">Testimoni</a></li>
-                <li><a href="pesan.php">Pesan Masuk</a></li>
                 <li><a href="../../index.php">Kembali Ke Website</a></li>
                 <li><a href="../auth/logout.php" class="logout">Logout</a></li>
             </ul>
