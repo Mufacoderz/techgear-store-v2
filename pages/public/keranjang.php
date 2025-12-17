@@ -10,6 +10,7 @@ include '../../includes/header.php';
 <?php if (empty($_SESSION['cart'])): ?>
     <p class="empty-cart">Keranjang masih kosong.</p>
     <a href="product.php" class="btn-back">Kembali Belanja</a>
+
 <?php else: ?>
 
 <div class="table-wrapper">
@@ -19,25 +20,24 @@ include '../../includes/header.php';
     <th>Produk</th>
     <th>Harga</th>
     <th>Qty</th>
-    <th>Subtotal</th>
     <th>Aksi</th>
 </tr>
 
 <?php
 $no = 1;
 $total = 0;
+
 foreach ($_SESSION['cart'] as $id => $item):
-    $subtotal = $item['price'] * $item['qty'];
-    $total += $subtotal;
+    $total += $item['price'] * $item['qty'];
 ?>
 <tr>
     <td><?= $no++; ?></td>
     <td><?= htmlspecialchars($item['name']); ?></td>
     <td>Rp <?= number_format($item['price'],0,',','.'); ?></td>
     <td><?= $item['qty']; ?></td>
-    <td>Rp <?= number_format($subtotal,0,',','.'); ?></td>
     <td>
-        <a href="../../controllers/deleteFromCart.php?id=<?= $id; ?>">
+        <a href="../../controllers/deleteFromCart.php?id=<?= $id; ?>"
+            onclick="return confirm('Hapus produk ini?')">
             <i class="fa-solid fa-trash"></i>
         </a>
     </td>
@@ -45,8 +45,8 @@ foreach ($_SESSION['cart'] as $id => $item):
 <?php endforeach; ?>
 
 <tr>
-    <th colspan="4">Total</th>
-    <th colspan="2">Rp <?= number_format($total,0,',','.'); ?></th>
+    <th colspan="4" style="text-align:right;">Total</th>
+    <th>Rp <?= number_format($total,0,',','.'); ?></th>
 </tr>
 </table>
 </div>
