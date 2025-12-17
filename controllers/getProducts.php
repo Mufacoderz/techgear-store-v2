@@ -44,7 +44,7 @@ function renderItems($items, $id, $title)
 
         echo "
             <div class='product-card' data-aos='fade-up'>
-                <img src='$imageFull' alt='{$p['name']}'>
+                <img src='{$imageFull}' alt='{$p['name']}'>
                 <h3>{$p['name']}</h3>
                 <p>Rp " . number_format($p['price'], 0, ',', '.') . "</p>
                 
@@ -57,6 +57,7 @@ function renderItems($items, $id, $title)
 
     echo "</div>";
 }
+
 
 ?>
 

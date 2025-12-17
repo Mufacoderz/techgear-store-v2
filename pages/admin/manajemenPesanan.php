@@ -4,7 +4,7 @@ include '../../config/koneksi.php';
 
 $pesanan = mysqli_query(
     $conn,
-    "SELECT * FROM orders ORDER BY created_at DESC"
+    "SELECT * FROM orders ORDER BY created_at ASC"
 );
 ?>
 
