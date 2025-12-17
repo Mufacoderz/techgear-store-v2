@@ -26,11 +26,10 @@
             <div class="footer-links">
                 <h4>Site Map</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Ideas</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Portal</a></li>
+                    <li><a href="/projek-uas/index.php">Home</a></li>
+                    <li><a href="/projek-uas/pages/public/product.php">Product</a></li>
+                    <li><a href="/projek-uas/pages/public/ideas.php">Ideas</a></li>
+                    <li><a href="/projek-uas/pages/public/contact.php">Contact Us</a></li>
                 </ul>
             </div>
 

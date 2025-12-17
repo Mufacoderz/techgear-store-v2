@@ -4,10 +4,12 @@
     padding: 24px;
     border-radius: 12px;
     border: 1px solid #1f2933;
+    overflow-x: auto; /* tambahan agar scroll muncul di mobile */
 }
 
 .table-wrapper table {
     width: 100%;
+    min-width: 600px; /* supaya tabel tidak terlalu kecil di desktop */
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     font-size: 0.9rem;
@@ -29,6 +31,8 @@
     color: #d1d5db;
     line-height: 1.6;
     vertical-align: top;
+    word-break: break-word; /* tambahan supaya teks panjang wrap */
+    max-width: 300px; /* optional, agar kolom pesan tidak melebar */
 }
 
 .table-wrapper tr:nth-child(even) {
@@ -38,10 +42,6 @@
 .table-wrapper tr:hover {
     background-color: #272727;
 }
-
-
-
-
 
 .table-wrapper .action-btn {
     display: inline-block;
@@ -53,6 +53,7 @@
     font-weight: 500;
     text-decoration: none;
     transition:0.2s;
+    white-space: nowrap; /* tombol tidak pecah ke baris baru */
 }
 
 .table-wrapper .action-btn:hover {
@@ -66,9 +67,14 @@
     font-style: italic;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .table-wrapper {
         padding: 16px;
+    }
+
+    .table-wrapper table {
+        min-width: 100%; /* biar scroll tetap muncul */
     }
 
     .table-wrapper th,
@@ -77,7 +83,11 @@
         font-size: 0.8rem;
     }
 
-    .table-wrapper td:nth-child(3) {
-        max-width: 260px;
+    /* kolom pesan dan email wrap agar tidak keluar */
+    .table-wrapper td:nth-child(3),
+    .table-wrapper td:nth-child(4),
+    .table-wrapper td:nth-child(5) {
+        max-width: 200px;
+        word-break: break-word;
     }
 }
