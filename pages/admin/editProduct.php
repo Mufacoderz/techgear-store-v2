@@ -1,4 +1,4 @@
-<?php require_once 'auto_guard.php'; ?>
+<?php require_once 'checkSession.php'; ?>
 
 <?php
 
