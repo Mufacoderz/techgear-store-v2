@@ -169,18 +169,24 @@
     background: var(--color-primary-hover);
     transform: scale(1.05);
 }
-
+.list-product-section a{
+    text-decoration: none;
+}
 .list-product-section .scroll-top {
-    font-size: 28px;
+    font-size: 18px;
     color: var(--color-primary);
     transition: 0.3s;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     border: 1px solid var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list-product-section .scroll-top:hover {
-    transform: translateY(-15px);
+    transform: translateY(-5px);
     color: var(--color-primary-hover);
     border: 1px solid var(--color-primary-hover);
 
@@ -196,7 +202,6 @@
     scroll-margin-top: 210px;
 }
 
-/* product.css */
 #product .hero-section .admin-card {
     background-color: var(--color-secondary);
     display: flex;

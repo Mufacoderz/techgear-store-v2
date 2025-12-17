@@ -44,7 +44,14 @@
 }
 
 .cart-action .btn-back{
-    background: #26dc35;
+    background: #2ecc71;
     text-decoration: none;
     padding: 10px;
+    border-radius: 5px;
+    color: var(--color-tertiary);
+
+}
+
+.cart-action .btn-back:hover{
+    background: #2ab363;
 }

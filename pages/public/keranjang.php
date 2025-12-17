@@ -7,10 +7,12 @@ include '../../includes/header.php';
 <main class="container-cart">
     <h1>Keranjang Belanja</h1>
 
+<!-- jika kosog  -->
 <?php if (empty($_SESSION['cart'])): ?>
     <p class="empty-cart">Keranjang masih kosong.</p>
     <a href="product.php" class="btn-back">Kembali Belanja</a>
 
+<!-- jika gk kosong -->
 <?php else: ?>
 
 <div class="table-wrapper">

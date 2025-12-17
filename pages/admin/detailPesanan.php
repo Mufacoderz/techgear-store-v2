@@ -86,6 +86,8 @@ $items = mysqli_query(
         </div>
 
     </div>
-</div>
 
-</body>
+
+
+<?php include 'footerAdmin.php'; ?>
+

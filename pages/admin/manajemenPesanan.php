@@ -48,7 +48,6 @@ $pesanan = mysqli_query(
                                         <i class="fa-solid fa-eye"></i>
                                         Detail
                                     </a>
-
                                     <a class="action-btn danger"
                                         href="../../controllers/deletePesanan.php?id=<?= $p['id']; ?>"
                                         onclick="return confirm('Hapus pesanan ini?')">
@@ -72,6 +71,4 @@ $pesanan = mysqli_query(
             </div>
 
         </div>
-    </div>
-
-</body>
+<?php include 'footerAdmin.php'; ?>
