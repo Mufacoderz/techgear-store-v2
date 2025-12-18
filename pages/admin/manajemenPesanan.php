@@ -45,14 +45,14 @@ $pesanan = mysqli_query(
                                 <td>
                                     <a class="action-btn info"
                                         href="detailPesanan.php?id=<?= $p['id']; ?>">
-                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-circle-info"></i>
                                         Detail
                                     </a>
-                                    <a class="action-btn danger"
+                                    <a class="action-btn done"
                                         href="../../controllers/deletePesanan.php?id=<?= $p['id']; ?>"
-                                        onclick="return confirm('Hapus pesanan ini?')">
-                                        <i class="fa-solid fa-trash"></i>
-                                        Hapus
+                                        onclick="return confirm('Konfirmasi pesanan telah selesai')">
+                                        <i class="fa-solid fa-check"></i>
+                                        Selesai
                                     </a>
                                 </td>
 

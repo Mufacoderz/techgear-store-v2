@@ -4,19 +4,18 @@ include '../../includes/meta.php';
 include '../../includes/header.php';
 ?>
 
-<main class="container-cart">
-    <h1>Keranjang Belanja</h1>
+<main class="cart-container">
+    <h1 class="cart-title">Keranjang Belanja</h1>
 
-<!-- jika kosog  -->
+
+
 <?php if (empty($_SESSION['cart'])): ?>
-    <p class="empty-cart">Keranjang masih kosong.</p>
-    <a href="product.php" class="btn-back">Kembali Belanja</a>
-
-<!-- jika gk kosong -->
+    <p class="cart-empty">Keranjang masih kosong.</p>
+    <a href="product.php" class="cart-btn">Kembali Belanja</a>
 <?php else: ?>
 
-<div class="table-wrapper">
-<table>
+<div class="cart-table-wrapper">
+<table class="cart-table">
 <tr>
     <th>No</th>
     <th>Produk</th>
@@ -28,9 +27,8 @@ include '../../includes/header.php';
 <?php
 $no = 1;
 $total = 0;
-
 foreach ($_SESSION['cart'] as $id => $item):
-    $total += $item['price'] * $item['qty'];
+$total += $item['price'] * $item['qty'];
 ?>
 <tr>
     <td><?= $no++; ?></td>
@@ -38,7 +36,8 @@ foreach ($_SESSION['cart'] as $id => $item):
     <td>Rp <?= number_format($item['price'],0,',','.'); ?></td>
     <td><?= $item['qty']; ?></td>
     <td>
-        <a href="../../controllers/deleteFromCart.php?id=<?= $id; ?>"
+        <a class="cart-delete"
+            href="../../controllers/deleteFromCart.php?id=<?= $id; ?>"
             onclick="return confirm('Hapus produk ini?')">
             <i class="fa-solid fa-trash"></i>
         </a>
@@ -46,19 +45,20 @@ foreach ($_SESSION['cart'] as $id => $item):
 </tr>
 <?php endforeach; ?>
 
-<tr>
-    <th colspan="4" style="text-align:right;">Total</th>
+<tr class="cart-total">
+    <th colspan="4">Total</th>
     <th>Rp <?= number_format($total,0,',','.'); ?></th>
 </tr>
 </table>
 </div>
 
 <div class="cart-action">
-    <a href="product.php" class="btn-back">Lanjut Belanja</a>
-    <a href="checkout.php" class="btn-checkout">Checkout</a>
+    <a href="product.php" class="cart-back">Lanjut Belanja</a>
+    <a href="checkout.php" class="cart-checkout">Checkout</a>
 </div>
 
 <?php endif; ?>
 </main>
+
 
 <?php include '../../includes/footer.php'; ?>

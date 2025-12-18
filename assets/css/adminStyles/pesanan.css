@@ -11,22 +11,22 @@
     white-space: nowrap;
 }
 
-.table-wrapper .action-btn.danger {
-    background: #dc2626;
+.table-wrapper .action-btn.done {
+    background: #2ecc71;
     color: #ffffff;
 }
 
-.table-wrapper .action-btn.danger:hover {
-    background: #b91c1c;
+.table-wrapper .action-btn.done:hover {
+    background: #2ab363;
 }
 
 .table-wrapper .action-btn.info {
-    background:#2ecc71;
+    background:#f1c40f;
     color: var(--color-tertiary);
 }
 
 .table-wrapper .action-btn.info:hover {
-    background: #2ab363;
+    background: #dbb20d;
 }
 
 .table-wrapper td .action-btn + .action-btn {
