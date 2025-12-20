@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/../config/baseURL.php';
+?>
+
+
 <footer class="footer">
     <div class="footer-container">
         <!-- Brand -->
@@ -26,10 +31,10 @@
             <div class="footer-links">
                 <h4>Site Map</h4>
                 <ul>
-                    <li><a href="/projek-uas/index.php">Home</a></li>
-                    <li><a href="/projek-uas/pages/public/product.php">Product</a></li>
-                    <li><a href="/projek-uas/pages/public/ideas.php">Ideas</a></li>
-                    <li><a href="/projek-uas/pages/public/contact.php">Contact Us</a></li>
+                    <li><a href="<?= BASE_URL ?>index.php">Home</a></li>
+                    <li><a href="<?= BASE_URL ?>pages/public/product.php">Product</a></li>
+                    <li><a href="<?= BASE_URL ?>pages/public/ideas.php">Ideas</a></li>
+                    <li><a href="<?= BASE_URL ?>pages/public/contact.php">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -54,8 +59,8 @@
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/data.js"></script> -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="/projek-uas/assets/js/data.js"></script>
-<script src="/projek-uas/assets/js/script.js"></script>
+<script src="<?= BASE_URL ?>assets/js/data.js"></script>
+<script src="<?= BASE_URL ?>assets/js/script.js"></script>
 
 </body>
 

@@ -1,3 +1,5 @@
+
+
 .table-wrapper .action-btn {
     display: inline-flex;
     align-items: center;
@@ -11,28 +13,29 @@
     white-space: nowrap;
 }
 
-.table-wrapper .action-btn.done {
+.table-wrapper a.action-btn.info {
+    background: #f1c40f;
+    color: #1f2937;
+}
+
+.table-wrapper a.action-btn.process {
+    background: #3498db;
+    color: #ffffff;
+}
+
+.table-wrapper a.action-btn.done {
     background: #2ecc71;
     color: #ffffff;
 }
 
-.table-wrapper .action-btn.done:hover {
-    background: #2ab363;
-}
-
-.table-wrapper .action-btn.info {
-    background:#f1c40f;
-    color: var(--color-tertiary);
-}
-
-.table-wrapper .action-btn.info:hover {
-    background: #dbb20d;
+.table-wrapper a.action-btn.arsip {
+    background: #e74c3c;
+    color: #ffffff;
 }
 
 .table-wrapper td .action-btn + .action-btn {
     margin-left: 6px;
 }
-
 
 .order-info {
     background: var(--color-secondary);
@@ -43,15 +46,89 @@
     line-height: 1.7;
 }
 
-.cart-action .btn-back{
+.cart-action .btn-back {
     background: #2ecc71;
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
     color: var(--color-tertiary);
-
 }
 
-.cart-action .btn-back:hover{
+.cart-action .btn-back:hover {
     background: #2ab363;
+}
+
+
+.archive-title {
+    margin-top: 60px;
+    color: #9ca3af;
+    font-weight: 600;
+}
+
+.archive-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    opacity: 0.85;
+}
+
+
+.archive-card {
+    flex: 0 0 calc(30% - 11px);
+    background: linear-gradient(180deg, #1f1f1f, #151515);
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 18px 16px 20px;
+    color: #9ca3af;
+    position: relative;
+}
+
+
+@media (max-width: 1024px) {
+    .archive-card {
+        flex: 0 0 calc(50% - 8px);
+    }
+}
+
+
+@media (max-width: 640px) {
+    .archive-card {
+        flex: 0 0 100%;
+    }
+}
+
+.archive-header {
+    margin-bottom: 10px;
+}
+
+.archive-name {
+    font-weight: 600;
+    color: #d1d5db;
+}
+
+.archive-date {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.archive-body {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.archive-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #374151;
+    color: #9ca3af;
+}
+
+.archive-empty {
+    color: #6b7280;
+    font-style: italic;
 }

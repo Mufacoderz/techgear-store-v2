@@ -45,7 +45,7 @@ $testimoni = mysqli_query(
                                 <td><?= htmlspecialchars($t['pesan']); ?></td>
                                 <td><?= date('d M Y', strtotime($t['created_at'])); ?></td>
                                 <td>
-                                    <a class="action-btn"
+                                    <a class="action-btn-del"
                                         href="../../controllers/deleteTestimoni.php?id=<?= $t['id']; ?>"
                                         onclick="return confirm('Hapus testimoni ini?')">
                                         <i class="fa-solid fa-trash"></i> Hapus

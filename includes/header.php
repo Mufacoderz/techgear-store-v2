@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/../config/baseURL.php';
+?>
 
 <body>
 <header>
@@ -9,10 +12,10 @@
         </h1>
 
         <ul class="nav-list">
-            <li><a href="/projek-uas/index.php">Beranda</a></li>
-            <li><a href="/projek-uas/pages/public/product.php">Produk</a></li>
-            <li><a href="/projek-uas/pages/public/ideas.php">Ide Setup</a></li>
-            <li><a href="/projek-uas/pages/public/contact.php">Kontak</a></li>
+            <li><a href="<?= BASE_URL ?>index.php">Beranda</a></li>
+            <li><a href="<?= BASE_URL ?>pages/public/product.php">Produk</a></li>
+            <li><a href="<?= BASE_URL ?>pages/public/ideas.php">Ide Setup</a></li>
+            <li><a href="<?= BASE_URL ?>pages/public/contact.php">Kontak</a></li>
         </ul>
 
         <div class="nav-right">

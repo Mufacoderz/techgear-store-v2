@@ -2,6 +2,7 @@
 
 <?php
 include '../../config/koneksi.php';
+require_once __DIR__ .'/../../config/baseURL.php';
 ?>
 
 <?php include 'metaAdmin.php'; ?>
@@ -28,7 +29,7 @@ include '../../config/koneksi.php';
         <div class="content-wrapper">
             <div class="add-product">
             <h3>Tambah produk</h3>
-            <a class="add-product-btn" href="/projek-uas/pages/admin/tambahProduct.php">
+            <a class="add-product-btn" href="<?= BASE_URL ?>pages/admin/tambahProduct.php">
                 <p>+</p>
             </a>
         </div>
